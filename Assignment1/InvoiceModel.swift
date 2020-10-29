@@ -7,3 +7,27 @@
 //
 
 import Foundation
+
+class InvoiceModel : NSObject {
+        
+    var ticket_type: NSString!
+    
+    var ticket_qty: NSInteger!
+
+    var total: NSInteger!
+    
+    var purchase_date : NSString!
+    
+    public static var invoiceList: [InvoiceModel] = []
+
+       public static var count: Int {
+           return invoiceList.count
+       }
+
+       public static func addInvoice(model : InvoiceModel) {
+           invoiceList.append(model)
+       }
+    public static func getInvoiceList() -> [InvoiceModel]{
+        return invoiceList
+    }
+}
