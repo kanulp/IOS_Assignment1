@@ -16,7 +16,7 @@ class InvoiceModel : NSObject {
 
     var total: NSInteger!
     
-    var purchase_date : NSString!
+    var purchase_date : NSDate!
     
     public static var invoiceList: [InvoiceModel] = []
 

@@ -38,7 +38,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         self.picker_ticket_type.dataSource = self
         ticketModel = TicketModel()
         invoiceModel = InvoiceModel()
-        picker_array = ticketModel!.getDefaultTicket()
+        TicketModel.getDefaultTicket()
+        picker_array = TicketModel.tickets!
         txt_total.text = "1170"
         txt_quantity.text = "1"
         txt_ticket_type.text = "Balcony"
@@ -115,24 +116,15 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
             t.ticket_type = txt_ticket_type.text as NSString?
             t.ticket_qty = selectedQty
             t.total = Int(txt_total.text)
-            t.purchase_date =  String(NSDate().timeIntervalSince1970) as NSString
+            t.purchase_date =  NSDate()
             InvoiceModel.addInvoice(model: t)
             
-//                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-
-//            let secondViewController = storyBoard.instantiateViewController(withIdentifier: "ManagerViewController") as! ManagerViewController
-//
-//            let navigation = UINavigationController(rootViewController: secondViewController)
-//            self.view.addSubview(navigation.view)
-//            self.navigationController?.addChild(navigation)
-//
-//            navigation.didMove(toParent: self)
-
+            showAlert()
             break
             
 
         default :
-            txt_quantity.text? = "qty"
+            txt_quantity.text? = "1"
             break
         }
         
@@ -146,7 +138,11 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         return picker_array.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(picker_array[row].ticket_type!) : \(picker_array[row].ticket_price!) $"
+         let type = "\(picker_array[row].ticket_type!)"
+              let qty = "\(picker_array[row].ticket_qty!)"
+              let price = "\(picker_array[row].ticket_price!)"
+          
+              return "\(type) \(qty) price : \(price) $"
         
      }
     
@@ -165,6 +161,20 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         txt_total.text = String(total!)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        picker_ticket_type.reloadAllComponents()
+    }
     
+    func showAlert() {
+       let alert = UIAlertController(title: "Ticket Bought Successful", message: "Go to Manager to view more details.", preferredStyle: UIAlertController.Style.alert)
+
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
