@@ -15,28 +15,28 @@
 
 <tr>
 <td>
- <img src="https://raw.githubusercontent.com/kanulp/IOS_Assignment1/master/screenshots/ss1.png" width="511" height="831"  title="Screenshot 1">
+ <img src="https://raw.githubusercontent.com/kanulp/IOS_Assignment1/master/screenshots/ss1.png" width="600"   title="Screenshot 1">
 </td>
 <td>
- <img src="https://raw.githubusercontent.com/kanulp/IOS_Assignment1/master/screenshots/ss2.png" width="511" height="831"  title="Screenshot 2">
-</td>
-</tr>
-
-<tr>
-<td>
- <img src="https://raw.githubusercontent.com/kanulp/IOS_Assignment1/master/screenshots/ss3.png" width="511" height="831"  title="Screenshot 3">
-</td>
-<td>
- <img src="https://raw.githubusercontent.com/kanulp/IOS_Assignment1/master/screenshots/ss4.png" width="511" height="831"  title="Screenshot 4">
+ <img src="https://raw.githubusercontent.com/kanulp/IOS_Assignment1/master/screenshots/ss2.png" width="600" title="Screenshot 2">
 </td>
 </tr>
 
 <tr>
 <td>
- <img src="https://raw.githubusercontent.com/kanulp/IOS_Assignment1/master/screenshots/ss5.png" width="511" height="831"  title="Screenshot 5">
+ <img src="https://raw.githubusercontent.com/kanulp/IOS_Assignment1/master/screenshots/ss3.png" width="600"   title="Screenshot 3">
 </td>
 <td>
- <img src="https://raw.githubusercontent.com/kanulp/IOS_Assignment1/master/screenshots/ss6.png" width="511" height="831"  title="Screenshot 6">
+ <img src="https://raw.githubusercontent.com/kanulp/IOS_Assignment1/master/screenshots/ss4.png" width="600"   title="Screenshot 4">
+</td>
+</tr>
+
+<tr>
+<td>
+ <img src="https://raw.githubusercontent.com/kanulp/IOS_Assignment1/master/screenshots/ss5.png" width="600"  title="Screenshot 5">
+</td>
+<td>
+ <img src="https://raw.githubusercontent.com/kanulp/IOS_Assignment1/master/screenshots/ss6.png" width="600" title="Screenshot 6">
 </td>
 
 </tr>
