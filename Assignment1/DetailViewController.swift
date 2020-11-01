@@ -38,7 +38,7 @@ class DetailViewController: UIViewController {
         let yourDate = NSDate()
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+        dateFormatter.dateFormat = "EEEE, MMM d, yyyy HH:mm:ss"
         
         let timeStamp = dateFormatter.string(from: invoiceModel!.purchase_date! as Date)
 
